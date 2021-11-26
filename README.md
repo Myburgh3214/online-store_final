@@ -1,23 +1,23 @@
 # Welcome to my store :) 
 
 
-# DB
+## DB
 
 Run the ```db/createDb.sql``` script in mysql to create the new database.  
 
 
-# API
+## API
 
 Define the db connection details in the ```api/index.php```  
 
 
-# Web
+## Web
 
 define the server url in the ```frontend/scripts/requestHandler.js``` 
 
-# Hosting
+## Hosting
 
 Setup a apache webserver in the ```/``` root directly of this project.   
 
 
-# Go to the site :) 
+### Go to the site :) 
