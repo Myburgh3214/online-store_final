@@ -1,0 +1,381 @@
+/*code for mobile devices smaller than 600px*/
+body { background-color: blue; }
+body#myPage {
+     background: white url("../images/crochet.jpg");
+     background-size: cover;
+}
+h1.logo {
+    text-align: center;
+    color: lightgray;
+    font-family: Dancing Script;
+    font-size: xxx-large;
+}
+img {
+    margin-right: auto;
+    margin-left: auto;
+    width: 15%;
+    display: block;
+}
+ button.signUp {
+    border: hidden;
+    margin-top: 5px;
+    background: border-box;
+    min-inline-size: -webkit-fill-available;
+    
+}
+button.signUp :hover  {
+    color:red;
+    transition:0.50s;
+}
+button.signIn :hover  {
+    color:red;
+    transition:0.50s;
+}
+button.signIn {
+    border: hidden;
+    background: border-box;
+    margin-bottom: 10px;
+    min-inline-size: -webkit-fill-available;
+}
+form {
+    -webkit-user-modify: read-write-plaintext-only;
+    margin-left: auto;
+    margin-right: auto;
+    text-align-last: center;
+}
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    max-height: 800px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+  }
+  
+  .price {
+    color: grey;
+    font-size: 22px;
+  }
+  
+  .card button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  }
+  
+  .card button:hover {
+    opacity: 0.7;
+  }
+  .container {
+    white-space: nowrap;
+}
+
+input[type="password"] {
+margin-left: auto;
+margin-right: auto;
+display:block
+}
+input[type="text"] {
+  margin-left: auto;
+margin-right: auto;
+display:block
+}
+.btns {
+  display: -webkit-inline-box;
+}
+.welcomeMssg {
+  font-size: xxx-large;
+}
+@media only screen and (min-width: 768px) {
+  body { background-color: green; }
+  body#myPage {
+    background: white url("../images/crochet.jpg");
+    background-size: cover;
+}
+h1.logo {
+   text-align: center;
+   color: lightgray;
+   font-family: Dancing Script;
+   font-size: xxx-large;
+}
+img {
+   margin-right: auto;
+   margin-left: auto;
+   width: 15%;
+   display: block;
+}
+button.signUp {
+   border: hidden;
+   margin-top: 5px;
+   background: border-box;
+   min-inline-size: -webkit-fill-available;
+   
+}
+button.signUp :hover  {
+   color:red;
+   transition:0.50s;
+}
+button.signIn :hover  {
+   color:red;
+   transition:0.50s;
+}
+button.signIn {
+   border: hidden;
+   background: border-box;
+   margin-bottom: 10px;
+   min-inline-size: -webkit-fill-available;
+}
+form {
+   -webkit-user-modify: read-write-plaintext-only;
+   margin-left: auto;
+   margin-right: auto;
+   text-align-last: center;
+}
+.card {
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+   max-width: 300px;
+   max-height: 800px;
+   margin: auto;
+   text-align: center;
+   font-family: arial;
+ }
+ 
+ .price {
+   color: grey;
+   font-size: 22px;
+ }
+ 
+ .card button {
+   border: none;
+   outline: 0;
+   padding: 12px;
+   color: white;
+   background-color: #000;
+   text-align: center;
+   cursor: pointer;
+   width: 100%;
+   font-size: 18px;
+ }
+ 
+ .card button:hover {
+   opacity: 0.7;
+ }
+ .container {
+   white-space: nowrap;
+}
+
+input[type="password"] {
+margin-left: auto;
+margin-right: auto;
+display:block
+}
+input[type="text"] {
+ margin-left: auto;
+margin-right: auto;
+display:block
+}
+.btns {
+ display: -webkit-inline-box;
+}
+.welcomeMssg {
+ font-size: xxx-large;
+}
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  body { background-color: yellow; }
+  body#myPage {
+    background: white url("../images/crochet.jpg");
+    background-size: cover;
+}
+h1.logo {
+   text-align: center;
+   color: lightgray;
+   font-family: Dancing Script;
+   font-size: xxx-large;
+}
+img {
+   margin-right: auto;
+   margin-left: auto;
+   width: 15%;
+   display: block;
+}
+button.signUp {
+   border: hidden;
+   margin-top: 5px;
+   background: border-box;
+   min-inline-size: -webkit-fill-available;
+   
+}
+button.signUp :hover  {
+   color:red;
+   transition:0.50s;
+}
+button.signIn :hover  {
+   color:red;
+   transition:0.50s;
+}
+button.signIn {
+   border: hidden;
+   background: border-box;
+   margin-bottom: 10px;
+   min-inline-size: -webkit-fill-available;
+}
+form {
+   -webkit-user-modify: read-write-plaintext-only;
+   margin-left: auto;
+   margin-right: auto;
+   text-align-last: center;
+}
+.card {
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+   max-width: 300px;
+   max-height: 800px;
+   margin: auto;
+   text-align: center;
+   font-family: arial;
+ }
+ 
+ .price {
+   color: grey;
+   font-size: 22px;
+ }
+ 
+ .card button {
+   border: none;
+   outline: 0;
+   padding: 12px;
+   color: white;
+   background-color: #000;
+   text-align: center;
+   cursor: pointer;
+   width: 100%;
+   font-size: 18px;
+ }
+ 
+ .card button:hover {
+   opacity: 0.7;
+ }
+ .container {
+   white-space: nowrap;
+}
+
+input[type="password"] {
+margin-left: auto;
+margin-right: auto;
+display:block
+}
+input[type="text"] {
+ margin-left: auto;
+margin-right: auto;
+display:block
+}
+.btns {
+ display: -webkit-inline-box;
+}
+.welcomeMssg {
+ font-size: xxx-large;
+}
+} 
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  body { background-color: orange; }
+  body#myPage {
+    background: white url("../images/crochet.jpg");
+    background-size: cover;
+}
+h1.logo {
+   text-align: center;
+   color: lightgray;
+   font-family: Dancing Script;
+   font-size: xxx-large;
+}
+img {
+   margin-right: auto;
+   margin-left: auto;
+   width: 15%;
+   display: block;
+}
+button.signUp {
+   border: hidden;
+   margin-top: 5px;
+   background: border-box;
+   min-inline-size: -webkit-fill-available;
+   
+}
+button.signUp :hover  {
+   color:red;
+   transition:0.50s;
+}
+button.signIn :hover  {
+   color:red;
+   transition:0.50s;
+}
+button.signIn {
+   border: hidden;
+   background: border-box;
+   margin-bottom: 10px;
+   min-inline-size: -webkit-fill-available;
+}
+form {
+   -webkit-user-modify: read-write-plaintext-only;
+   margin-left: auto;
+   margin-right: auto;
+   text-align-last: center;
+}
+.card {
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+   max-width: 300px;
+   max-height: 800px;
+   margin: auto;
+   text-align: center;
+   font-family: arial;
+ }
+ 
+ .price {
+   color: grey;
+   font-size: 22px;
+ }
+ 
+ .card button {
+   border: none;
+   outline: 0;
+   padding: 12px;
+   color: white;
+   background-color: #000;
+   text-align: center;
+   cursor: pointer;
+   width: 100%;
+   font-size: 18px;
+ }
+ 
+ .card button:hover {
+   opacity: 0.7;
+ }
+ .container {
+   white-space: nowrap;
+}
+
+input[type="password"] {
+margin-left: auto;
+margin-right: auto;
+display:block
+}
+input[type="text"] {
+ margin-left: auto;
+margin-right: auto;
+display:block
+}
+.btns {
+ display: -webkit-inline-box;
+}
+.welcomeMssg {
+ font-size: xxx-large;
+}
+}

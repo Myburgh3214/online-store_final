@@ -1,0 +1,8 @@
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.+)$ index.php?_endpoint=$1 [L]
+
+# rewrites url instead of us having to put ?_endpoint=XXX in it... uses the same flow as WordPress
+# eg: /api/test -> would change to /api/index.php?_endpoint=test
+# eg: /api/login -> would change to /api/index.php?_endpoint=login
