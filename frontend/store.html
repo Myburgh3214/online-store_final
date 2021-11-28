@@ -67,6 +67,16 @@
       // handle cart code
       function placeOrder() {
         window.cart.placeOrder(result => {
+          if (result.status === 401) { // login required
+            alert("Please login/sign up before placing your order...");
+            window.location.pathname = window.location.pathname.replace("store.html", "logIn.html");
+            return;
+          }
+          if (result.status === 201) { // login required
+            alert("Thanks for placing your order with us :)");
+            window.cart.clearCart();
+            return;
+          }
           result.text().then(console.log)
         });
       }

@@ -19,6 +19,7 @@ if (isset($postedData['items']) && count($postedData['items']) > 0) {
   }
   $APP_DATABASE->finalizeOrder($createdOrderId, $workingTotal);
   
+  $APP_SESSION->resetSession();
   SendStatus(201);
 }
 
