@@ -379,3 +379,20 @@ display:block
  font-size: xxx-large;
 }
 }
+
+.clean-cart {
+   position: fixed;
+   top: 10px;
+   right: 10px;
+   background: white;
+   bottom: 10px;
+   width: 300px;
+   z-index: 2;
+   text-align: center;
+}
+.clean-cart.hidden {
+   right: -800px;
+}
+.clean-cart .clean-cart-items {
+   padding: 20px;
+}

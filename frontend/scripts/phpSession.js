@@ -7,6 +7,7 @@ getRequest("session", (responseAsObj) => { // Get the current session informatio
         session: 'SESSION ID',
         email: 'email address' // or null (if the user is not logged in)
     */
+    window.sessionId = response.session;
     console.log(response)
     if (document.getElementById('loggedInState') !== null // Just checking if the element `<div id="loggedInState"></div>` exists on the page
       && response.email !== null) { // Checking if the email passed from the server is not null - ie: logged in

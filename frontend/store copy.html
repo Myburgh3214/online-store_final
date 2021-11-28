@@ -28,6 +28,7 @@
         <a href="logIn.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Login</a>
         <a href="signUp.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Sign Up</a>
       </div>
+      <div id="cart"></div>
     </div>
   </div>
 
@@ -43,43 +44,45 @@
       <div class="greyBeanies" id="products-list">
       </div>
     </div>
+
+    <div id='cart-wrapper' class="slider close">
+      <div id='cart'>
+        <div id="cart-products-wrapper">
+          <table id="cart-table">
+            <thead id="cart-table-header">
+              <th class="name-col">Product Name</th>
+              <th class="quantity-col">Quantity</th>
+              <th class="price-col">Price</th>
+            </thead>
+            <tbody id="cart-table-body"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div id='amount-controls'>
+        <div id="cart-amount-wrapper">
+          <table>
+            <tbody>
+              <tr id='total-wrapper'>
+                <td id="total-label">Total:</td>
+                <td id="total">0.00</td>
+              </tr>
+
+              <tr id="promo-checkout">
+                <td>
+                  <button id="checkout">Place Order</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
   </div>
   <!-- Container -->
-  <div id="cart" class="clean-cart">
-    <h4>MY CART</h4>
-    <div class="clean-cart-items">
-      <table id="cart-table">
-        <thead id="cart-table-header">
-          <th class="name-col">Product Name</th>
-          <th class="quantity-col">Quantity</th>
-          <th class="price-col">Price</th>
-        </thead>
-        <tbody id="clean-cart-body"></tbody>
-      </table>
-    </div>
-    <div style="text-align:right;">
-      <div style="padding:10px;">
-        <td>Total:</td>
-        <td><span id="clean-cart-total">R0.00</span></td>
-      </div>
-      <div style="float: right; padding: 10px">
-        <button id="checkout">Place Order</button>
-      </div>
-    </div>
-    <script>
-      // handle cart code
-      window.cartUpdated = (newCart) => {
-        let newHtml = '';
-
-        for (let cartItem of newCart.getItems()) {
-          let product = cartItem.getProduct();
-          newHtml += `<tr><td>${product.name}</td><td><input type="number" value="${cartItem.getQty()}" style="width: 40px;" /></td><td>R${cartItem.priceTotal().toFixed(2)}</td></tr>`;
-        }
-
-        document.getElementById('clean-cart-body').innerHTML = newHtml;
-        document.getElementById('clean-cart-total').innerText = `R${newCart.getTotal().toFixed(2)}`;
-      }
-    </script>
+  <div class="w3-container" style="position:relative">
+    <a href="cart.html" class="w3-button w3-xlarge w3-circle w3-teal"
+      style="position:absolute;top:-28px;right:24px">+</a>
   </div>
 
   <!-- Footer -->
