@@ -11,6 +11,14 @@ class Session {
     session_start();
   }
 
+  public function isLoggedIn() {
+    return isset($_SESSION[$this->_sessionEmailVar]);
+  }
+
+  public function getUserKey() {
+    return $_SESSION[$this->_sessionEmailVar];
+  }
+
   public function getSession() {
     return array(
       'session' => session_id(),
@@ -25,5 +33,13 @@ class Session {
 
   public function setSession($email) {
     $_SESSION[$this->_sessionEmailVar] = $email;
+  }
+
+  public function resetSession() {
+    $tempSession = $this->getSession();
+    session_unset(); 
+    session_destroy();
+    session_start();
+    $this->setSession($tempSession['email']);
   }
 }

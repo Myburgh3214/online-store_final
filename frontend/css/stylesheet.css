@@ -1,383 +1,90 @@
-/*code for mobile devices smaller than 600px*/
 body {
-     background: rgb(242,242,242);
-     background-size: cover;
+  background: rgb(242,242,242);
+  background-size: cover;
+  padding-top: 40px;
+  text-align: center;
+}
+footer {
+   margin-top: 40px;
+}
+@media only screen and (max-width: 768px) {
+   body { 
+      padding-top: 80px;
+   }
 }
 h1.logo {
-    text-align: center;
-    color: lightgray;
-    font-family: Dancing Script;
-    font-size: xxx-large;
-}
-img {
-    margin-right: auto;
-    margin-left: auto;
-    width: 15%;
-    display: block;
-}
- button.signUp {
-    border: hidden;
-    margin-top: 5px;
-    background: border-box;
-    min-inline-size: -webkit-fill-available;
-    
-}
-button.signUp :hover  {
-    color:red;
-    transition:0.50s;
-}
-button.signIn :hover  {
-    color:red;
-    transition:0.50s;
-}
-button.signIn {
-    border: hidden;
-    background: border-box;
-    margin-bottom: 10px;
-    min-inline-size: -webkit-fill-available;
-}
-form {
-    -webkit-user-modify: read-write-plaintext-only;
-    margin-left: auto;
-    margin-right: auto;
-    text-align-last: center;
-}
-.card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    max-width: 300px;
-    max-height: 800px;
-    margin: auto;
-    text-align: center;
-    font-family: arial;
-  }
-  
-  .price {
-    color: grey;
-    font-size: 22px;
-  }
-  
-  .card button {
-    border: none;
-    outline: 0;
-    padding: 12px;
-    color: white;
-    background-color: #000;
-    text-align: center;
-    cursor: pointer;
-    width: 100%;
-    font-size: 18px;
-  }
-  
-  .card button:hover {
-    opacity: 0.7;
-  }
-  .container {
-    white-space: nowrap;
-}
-
-input[type="password"] {
-margin-left: auto;
-margin-right: auto;
-display:block
-}
-input[type="text"] {
-  margin-left: auto;
-margin-right: auto;
-display:block
-}
-.btns {
-  display: -webkit-inline-box;
-}
-.welcomeMssg {
-  font-size: xxx-large;
-}
-@media only screen and (min-width: 768px) {
-  body { background-color: green; }
-  body#myPage {
-    background: white url("../images/crochet.jpg");
-    background-size: cover;
-}
-h1.logo {
-   text-align: center;
-   color: lightgray;
-   font-family: Dancing Script;
-   font-size: xxx-large;
-}
-img {
-   margin-right: auto;
-   margin-left: auto;
-   width: 15%;
-   display: block;
-}
-button.signUp {
-   border: hidden;
-   margin-top: 5px;
-   background: border-box;
-   min-inline-size: -webkit-fill-available;
-   
-}
-button.signUp :hover  {
-   color:red;
-   transition:0.50s;
-}
-button.signIn :hover  {
-   color:red;
-   transition:0.50s;
-}
-button.signIn {
-   border: hidden;
-   background: border-box;
-   margin-bottom: 10px;
-   min-inline-size: -webkit-fill-available;
-}
-form {
-   -webkit-user-modify: read-write-plaintext-only;
-   margin-left: auto;
-   margin-right: auto;
-   text-align-last: center;
-}
-.card {
-   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-   max-width: 300px;
-   max-height: 800px;
-   margin: auto;
-   text-align: center;
-   font-family: arial;
- }
- 
- .price {
-   color: grey;
-   font-size: 22px;
- }
- 
- .card button {
-   border: none;
-   outline: 0;
-   padding: 12px;
-   color: white;
-   background-color: #000;
-   text-align: center;
-   cursor: pointer;
-   width: 100%;
-   font-size: 18px;
- }
- 
- .card button:hover {
-   opacity: 0.7;
- }
- .container {
-   white-space: nowrap;
-}
-
-input[type="password"] {
-margin-left: auto;
-margin-right: auto;
-display:block
-}
-input[type="text"] {
- margin-left: auto;
-margin-right: auto;
-display:block
-}
-.btns {
- display: -webkit-inline-box;
-}
-.welcomeMssg {
+ text-align: center;
+ color: lightgray;
+ font-family: Dancing Script;
  font-size: xxx-large;
 }
-}
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-  body { background-color: yellow; }
-  body#myPage {
-    background: white url("../images/crochet.jpg");
-    background-size: cover;
-}
-h1.logo {
-   text-align: center;
-   color: lightgray;
-   font-family: Dancing Script;
-   font-size: xxx-large;
-}
 img {
-   margin-right: auto;
-   margin-left: auto;
-   width: 15%;
-   display: block;
+ margin-right: auto;
+ margin-left: auto;
+ width: 15%;
+ display: block;
 }
 button.signUp {
-   border: hidden;
-   margin-top: 5px;
-   background: border-box;
-   min-inline-size: -webkit-fill-available;
-   
+ border: hidden;
+ margin-top: 5px;
+ background: border-box;
+ min-inline-size: -webkit-fill-available;
+ 
 }
 button.signUp :hover  {
-   color:red;
-   transition:0.50s;
+ color:red;
+ transition:0.50s;
 }
 button.signIn :hover  {
-   color:red;
-   transition:0.50s;
+ color:red;
+ transition:0.50s;
 }
 button.signIn {
-   border: hidden;
-   background: border-box;
-   margin-bottom: 10px;
-   min-inline-size: -webkit-fill-available;
-}
-form {
-   -webkit-user-modify: read-write-plaintext-only;
-   margin-left: auto;
-   margin-right: auto;
-   text-align-last: center;
+ border: hidden;
+ background: border-box;
+ margin-bottom: 10px;
+ min-inline-size: -webkit-fill-available;
 }
 .card {
-   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-   max-width: 300px;
-   max-height: 800px;
-   margin: auto;
-   text-align: center;
-   font-family: arial;
- }
- 
- .price {
-   color: grey;
-   font-size: 22px;
- }
- 
- .card button {
-   border: none;
-   outline: 0;
-   padding: 12px;
-   color: white;
-   background-color: #000;
-   text-align: center;
-   cursor: pointer;
-   width: 100%;
-   font-size: 18px;
- }
- 
- .card button:hover {
-   opacity: 0.7;
- }
- .container {
-   white-space: nowrap;
+ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+ max-width: 300px;
+ max-height: 800px;
+ margin: auto;
+ text-align: center;
+ font-family: arial;
 }
 
-input[type="password"] {
-margin-left: auto;
-margin-right: auto;
-display:block
-}
-input[type="text"] {
- margin-left: auto;
-margin-right: auto;
-display:block
-}
-.btns {
- display: -webkit-inline-box;
-}
-.welcomeMssg {
- font-size: xxx-large;
-}
-} 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-  body { background-color: orange; }
-  body#myPage {
-    background: white url("../images/crochet.jpg");
-    background-size: cover;
-}
-h1.logo {
-   text-align: center;
-   color: lightgray;
-   font-family: Dancing Script;
-   font-size: xxx-large;
-}
-img {
-   margin-right: auto;
-   margin-left: auto;
-   width: 15%;
-   display: block;
-}
-button.signUp {
-   border: hidden;
-   margin-top: 5px;
-   background: border-box;
-   min-inline-size: -webkit-fill-available;
-   
-}
-button.signUp :hover  {
-   color:red;
-   transition:0.50s;
-}
-button.signIn :hover  {
-   color:red;
-   transition:0.50s;
-}
-button.signIn {
-   border: hidden;
-   background: border-box;
-   margin-bottom: 10px;
-   min-inline-size: -webkit-fill-available;
-}
-form {
-   -webkit-user-modify: read-write-plaintext-only;
-   margin-left: auto;
-   margin-right: auto;
-   text-align-last: center;
-}
-.card {
-   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-   max-width: 300px;
-   max-height: 800px;
-   margin: auto;
-   text-align: center;
-   font-family: arial;
- }
- 
- .price {
-   color: grey;
-   font-size: 22px;
- }
- 
- .card button {
-   border: none;
-   outline: 0;
-   padding: 12px;
-   color: white;
-   background-color: #000;
-   text-align: center;
-   cursor: pointer;
-   width: 100%;
-   font-size: 18px;
- }
- 
- .card button:hover {
-   opacity: 0.7;
- }
- .container {
-   white-space: nowrap;
+.price {
+ color: grey;
+ font-size: 22px;
 }
 
-input[type="password"] {
-margin-left: auto;
-margin-right: auto;
-display:block
+.card button,
+.fancyButton {
+ border: none;
+ outline: 0;
+ padding: 12px;
+ color: white;
+ background-color: #000;
+ text-align: center;
+ cursor: pointer;
+ width: 100%;
+ font-size: 18px;
 }
-input[type="text"] {
- margin-left: auto;
-margin-right: auto;
-display:block
+
+.card button:hover,
+.fancyButton:hover {
+ opacity: 0.7;
 }
-.btns {
- display: -webkit-inline-box;
+.container {
+ white-space: nowrap;
 }
+
 .welcomeMssg {
- font-size: xxx-large;
+font-size: xxx-large;
 }
-}
+
+
 
 .clean-cart {
    position: fixed;
@@ -405,3 +112,38 @@ display:block
    left: 0;
    right: 0;
 }
+
+
+.fancyForm {
+   width: 300px;
+   max-width: 100%;
+   padding: 20px;
+   background: white;
+   margin: 0 auto;
+   margin-top: 20px;
+   margin-bottom: 20px;
+   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+   border-radius: 4px;
+   text-align: center;
+ }
+ .card2-container {
+   width: 100%;
+   padding: 20px;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items: center;
+ }
+ .card2-container > .card {
+   background: #FFF;
+   color: #333333;
+   padding: 20px;
+   margin: 20px;
+ }
+ .card2-container > .card button {
+   margin: 5px;
+ }
+ .card2-container > .card .product-name {
+   font-size: 2em;
+   font-weight: 500;
+ }

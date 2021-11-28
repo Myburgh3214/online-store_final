@@ -3,7 +3,7 @@
   <html>
   <title>Contact Us - Online Store</title>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -29,43 +29,40 @@
   </div>
 
   <!-- Registration Form -->
-  <div>
-    <form action="javascript:sendMessage();" method="POST">
-      <div class="container" contenteditable="false">
-        <h1><b>Contact Us Form</b></h1>
-        <br>
+  <div class="card2-container">
+    <div class="fancyForm">
+      <form action="javascript:sendMessage();" method="POST">
+        <h1>Contact Us</h1>
+        <br />
         <div>
           <label for="email">
-            <h4><b>Email:</b></h4>
+            <h4>Email:</h4>
           </label>
           <input type="email" placeholder="Enter Email" id="email" required />
         </div>
         <div >
           <label for="name">
-            <h4><b>Name:</b></h4>
+            <h4>Name:</h4>
           </label>
           <input type="text" placeholder="Enter Name" id="name" required />
         </div>
-        <div >
+        <div>
           <label for="message">
-            <h4><b>Message:</b></h4>
+            <h4>Message:</h4>
           </label>
           <textarea type="text" placeholder="Enter Message" id="message" required ></textarea>
         </div>
 
-        <div class="btns">
-          <div>
-            <button type="submit" name="submit">Submit</button>
-          </div>
+        <div>
+          <button type="submit" class="fancyButton" name="submit">Submit</button>
         </div>
-    </form>
-  </div>
-
-  <!-- Container -->
-  <div class="w3-container" style="position:relative">
-    <iframe
+      </form>
+    </div>
+    <div class="fancyForm" style="width: 600px;">
+      <iframe
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3391.144331123383!2d18.625727815157376!3d-31.793816181280032!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1c33d0a295b659c5%3A0xaab776170b0bce89!2sKlawer%20Wine%20Cellars%20(Pty)%20Ltd!5e0!3m2!1sen!2sza!4v1632388604629!5m2!1sen!2sza"
-      width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      style="width: 100%; height: 600px; border:none;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
   </div>
 
   <footer>
@@ -96,7 +93,7 @@
           alert('thanks!');
           return;
         }
-        alert(response.text());        
+        result.text().then(x => alert(x));     
       });
     }
   </script>

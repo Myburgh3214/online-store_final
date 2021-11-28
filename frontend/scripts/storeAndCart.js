@@ -122,6 +122,29 @@ function cart(orderId) { // we match the session id to the order id ....
   if (window.cartUpdated !== undefined) {
     window.cartUpdated(this); // if the productsReady function is on window, it will be called to let us know we can load the products on screen
   }
+
+  this.placeOrder = (callback) => {
+    postRequest('orders', {
+      items: this.getItems().map(product => {
+        return {
+          id: product.id(),
+          qty: product.getQty()
+        }
+      })
+    }, callback);
+    /*{
+      items: [
+        {
+          id: 'a',
+          qty: 1
+        },
+        {
+          id: 'b',
+          qty: 1
+        }
+      ]
+    }*/
+  }
 }
 
 function cartItem(productId, qty) {

@@ -29,7 +29,11 @@ function SendStatus($statusCode)
   die;
 }
 
-$funcFile = './endpoints/' . $_GET['_endpoint'] . '.php';
+function GetJSONObjectFromRequest() {
+  return json_decode(file_get_contents('php://input'), true);
+}
+
+$funcFile = './endpoints/' . strtolower($_GET['_endpoint']) . '/' . strtolower($_SERVER['REQUEST_METHOD']) . '.php';
 if (!file_exists($funcFile)) {
   http_response_code(404);
   die;

@@ -19,7 +19,7 @@ getRequest("session", (responseAsObj) => { // Get the current session informatio
 })
 
 function logout() {
-  getRequest("logout", () => {
+  deleteRequest("session", () => {
     window.location.reload(true);
   })
 }

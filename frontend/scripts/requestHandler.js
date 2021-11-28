@@ -31,13 +31,13 @@ function postRequest (apiName, fields, callback) {
   ['fielda', 'field2'] => names 
   */
   let myHeaders = new Headers();
-  myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
+  myHeaders.append("Content-Type", "application/json");
 
-  let urlencoded = new URLSearchParams();
+  /*let urlencoded = new URLSearchParams();
 
   for (let field of Object.keys(fields)) {
     urlencoded.append(field, fields[field]);
-  }
+  }*/
   //['fielda', 'field2']
   // 0
   //urlencoded.append('fielda', 'asdf');
@@ -47,13 +47,39 @@ function postRequest (apiName, fields, callback) {
   //urlencoded.append("psw", document.getElementById('psw').value);
 
   //fetch(API_BASE_URL + '/api/index.php?_endpoint=' +apiName, requestOptions)
-  webRequest(apiName, 'POST', myHeaders, urlencoded, callback);
+  webRequest(apiName, 'POST', myHeaders, JSON.stringify(fields), callback);
+}
+
+function putRequest (apiName, fields, callback) {
+  /*
+  fields = {
+    fielda: 'asdf',
+    field2: 'asdfasdf'
+  }
+  fields.fielda
+  fields.field2
+  fields['fielda']
+  fields['field2']
+
+  Object.keys(fields)
+  ['fielda', 'field2'] => names 
+  */
+  let myHeaders = new Headers();
+  myHeaders.append("Content-Type", "application/json");
+
+  webRequest(apiName, 'PUT', myHeaders, JSON.stringify(fields), callback);
 }
 
 function getRequest (apiName, callback) {
   let myHeaders = new Headers();
   myHeaders.append("Content-Type", "application/json");
   webRequest(apiName, 'GET', myHeaders, undefined, callback);
+}
+
+function deleteRequest (apiName, callback) {
+  let myHeaders = new Headers();
+  myHeaders.append("Content-Type", "application/json");
+  webRequest(apiName, 'DELETE', myHeaders, undefined, callback);
 }
 
 /*postRequest('login', {

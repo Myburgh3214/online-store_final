@@ -3,7 +3,7 @@
   <html>
   <title>Store - Online Store</title>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -30,16 +30,14 @@
   </div>
 
   <!-- Team Container -->
-  <div class="w3-container w3-padding-64 w3-center" id="team">
+  <!-- <div class="w3-container w3-padding-64 w3-center" id="team">
     <img src="images/koekieblom.jpg">
-  </div>
+  </div> -->
 
 
   <div class="basket">
     <h2>Shop With Ease</h2>
-    <div id="shop">
-      <div class="greyBeanies" id="products-list">
-      </div>
+    <div class="card2-container" id="products-list">
     </div>
   </div>
   <!-- Container -->
@@ -62,11 +60,16 @@
         <td><span id="clean-cart-total">R0.00</span></td>
       </div>
       <div style="float: right; padding: 10px">
-        <button id="checkout">Place Order</button>
+        <button id="checkout" onclick="placeOrder()">Place Order</button>
       </div>
     </div>
     <script>
       // handle cart code
+      function placeOrder() {
+        window.cart.placeOrder(result => {
+          result.text().then(console.log)
+        });
+      }
       function cartItemQtyChangeEvent (e) {
         let qty = Number.parseInt(e.value);
         if (qty < 1 || isNaN(qty))
@@ -119,13 +122,13 @@
           singleProduct = product;
         }
 
-        newHtml += `<div>
+        newHtml += `<div class="card">
             <p class="product-name" >${product.name}</p>
             <p class="product-description">${product.description}</p>
             <p class="product-price" >R${product.price}</p>`;
         if (singleProduct === false)
-          newHtml +=`<button onclick="window.goToProduct('${product.id}')" class="add-to-cart">VIEW ITEM</button>`
-        newHtml += `<button onclick="addProductToCart('${product.id}', '${product.name}')" class="add-to-cart">ADD TO CART</button>
+          newHtml +=`<button onclick="window.goToProduct('${product.id}')">VIEW ITEM</button>`
+        newHtml += `<button onclick="addProductToCart('${product.id}', '${product.name}')" >ADD TO CART</button>
           </div>`;
       }
       document.getElementById('products-list').innerHTML = newHtml;

@@ -3,27 +3,16 @@
 
 <head>
   <title>Log In - Online Store</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/stylesheet.css">
   <script src="scripts/requestHandler.js"></script>
   <script src="scripts/phpSession.js"></script>
-  <style>
-    body,
-    h1 {
-      font-family: "Raleway", sans-serif
-    }
 
-    body,
-    html {
-      height: 100%
-    }
-
-    body {
-      background-image: url(images/crochet.jpg);
-    }
-  </style>
 </head>
 
 <body>  
@@ -43,10 +32,10 @@
     </div>
 
   <div>
-    <form action="javascript:login();" method="POST">
-      <div class="container" contenteditable="false">
-        <h1><b>Log In Form</b></h1>
-        <br>
+    <div class="fancyForm">
+      <form action="javascript:login();" method="POST">
+        <h1>Log In</h1>
+        <br />
         <div>
           <label for="email">
             <h4><b>Email:</b>
@@ -60,15 +49,14 @@
           <input type="password" placeholder="Enter Password" id="psw" required />
         </div>
 
-        <div class="btns">
-          <!-- <div>
-             <button type="submit" class="forgot">Forgot Password</button>
-          </div> -->
-          <div>
-            <button type="submit" name="login">Confirm</button>
-          </div>
+        <!-- <div>
+           <button type="submit" class="forgot">Forgot Password</button>
+        </div> -->
+        <div>
+          <button type="submit" class="fancyButton" name="login">Confirm</button>
         </div>
-    </form>
+      </form>
+    </div>
   </div>
 
   <footer>
@@ -86,7 +74,7 @@
 
   <script>
     function login() {
-      postRequest('login', {
+      putRequest('session', {
           email: document.getElementById('email').value,
           psw: document.getElementById('psw').value
         },
