@@ -1,3 +1,10 @@
+window.showCart = () =>{  
+  document.getElementById('clean-cart').classList.remove('hidden');
+}
+window.hideCart = () =>{  
+  document.getElementById('clean-cart').classList.add('hidden');
+}
+
 getRequest("products", (responseAsObj) => { // Get the current session information from the API for the current browser session
   responseAsObj.json().then(response => { // parse the response into JSON
     for (let i = 0 ; i < response.length ; i++) {
@@ -12,6 +19,8 @@ getRequest("products", (responseAsObj) => { // Get the current session informati
     }
     window.products = response;
     window.cart = new cart(window.sessionId);
+
+    window.hideCart();
   });
 });
 

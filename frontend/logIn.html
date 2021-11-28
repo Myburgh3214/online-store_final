@@ -2,6 +2,7 @@
 <html>
 
 <head>
+  <title>Log In - Online Store</title>
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -25,20 +26,22 @@
   </style>
 </head>
 
-<body>
-  <!-- Navbar -->
-  <div class="w3-top">
-    <div class="w3-bar w3-theme-d2 w3-left-align">
-
-      <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2"
-        href="index.html"><i class="fa fa-bars"></i></a>
-      <a href="index.html" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home w3-margin-right"></i>Home</a>
-      <div id="loggedInState">
-        <a href="signUp.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Sign Up</a>
+<body>  
+    <!-- Navbar -->
+    <div class="w3-top">
+      <div class="w3-bar w3-theme-d2 w3-left-align">
+  
+        <a href="index.html" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home w3-margin-right"></i>Home</a>
+        <a href="store.html" class="w3-bar-item w3-button w3-hover-white">Store</a>
+        <a href="galleryPage.html" class="w3-bar-item w3-button w3-hover-white">Gallery</a>
+        <a href="about.html" class="w3-bar-item w3-button w3-hover-white">About Us</a>
+        <a href="contact.html" class="w3-bar-item w3-button w3-hover-white">Contact</a>
+        <div id="loggedInState">
+          <a href="signUp.html" class="w3-bar-item w3-button w3-hover-white">Sign Up</a>
+        </div>
       </div>
-
     </div>
-  </div>
+
   <div>
     <form action="javascript:login();" method="POST">
       <div class="container" contenteditable="false">
@@ -67,6 +70,19 @@
         </div>
     </form>
   </div>
+
+  <footer>
+    <p class="poweredBy">Powered by MEEE</p>
+
+    <div style="position:relative;bottom:100px;z-index:1;" class="w3-tooltip w3-right" >
+      <span class="w3-text w3-padding w3-teal w3-hide-small">Go To Top</span>
+      <a class="w3-button w3-theme" href="javascript:window.triggerScrollToTop();" id="simplescrollup__button"><span class="w3-xlarge">
+          <i class="fa fa-chevron-circle-up"></i></span></a>
+    </div>
+    <!-- <a href="javascript:window.triggerScrollToTop();" id="simplescrollup__button" class="simplescrollup__button simplescrollup__button--hide">Scroll to top</a> -->
+  </footer>
+  <link rel="stylesheet" href="css/footer.css">
+  <script async src="scripts/simplescrollup.js"></script>
 
   <script>
     function login() {

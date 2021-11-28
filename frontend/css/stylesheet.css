@@ -1,7 +1,6 @@
 /*code for mobile devices smaller than 600px*/
-body { background-color: blue; }
-body#myPage {
-     background: white url("../images/crochet.jpg");
+body {
+     background: rgb(242,242,242);
      background-size: cover;
 }
 h1.logo {
@@ -387,12 +386,22 @@ display:block
    background: white;
    bottom: 10px;
    width: 300px;
+   max-width: calc(100% - 10px);
    z-index: 2;
    text-align: center;
+   transition-timing-function: ease-in-out;
+   transition: 1s;
 }
 .clean-cart.hidden {
-   right: -800px;
+   transform: translateX(130%);
 }
 .clean-cart .clean-cart-items {
    padding: 20px;
+}
+
+.w3-top .w3-bar {
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
 }
