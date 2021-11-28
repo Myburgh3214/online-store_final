@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Log In - Online Store</title>
+  <title>My Profile - Online Store</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -26,7 +26,7 @@
         <a href="about.html" class="w3-bar-item w3-button w3-hover-white">About Us</a>
         <a href="contact.html" class="w3-bar-item w3-button w3-hover-white">Contact</a>
         <div id="loggedInState">
-          <a href="signUp.html" class="w3-bar-item w3-button w3-hover-white">Sign Up</a>
+          <a href="logIn.html" class="w3-bar-item w3-button w3-hover-white">Login</a>
         </div>
       </div>
     </div>
@@ -34,29 +34,17 @@
   <div>
     <div class="fancyForm">
       <form action="javascript:login();" method="POST">
-        <h1>Log In</h1>
+        <h1>My Profile</h1>
         <br />
-        <div>
+        <div class="loggedInState-loggedin">
           <label for="email">
             <h4><b>Email:</b>
           </label>
-          <input type="text" placeholder="Enter Email" id="email" required />
+          <span class="loggedInState-userEmail"></span>
         </div>
-        <div class="passwordFld">
-          <label for="psw">
-            <h4><b>Password:</b>
-          </label>
-          <input type="password" placeholder="Enter Password" id="psw" required />
+        <div class="loggedInState-loggedout">
+          You're not logged in ..... please login to view your profile
         </div>
-
-        <!-- <div>
-           <button type="submit" class="forgot">Forgot Password</button>
-        </div> -->
-        <div>
-          <button type="submit" class="fancyButton" name="login">Confirm</button>
-        </div>
-
-        <a href="resetPassword.html">Reset Password</a>
       </form>
     </div>
   </div>

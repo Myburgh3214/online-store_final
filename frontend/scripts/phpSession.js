@@ -14,9 +14,14 @@ getRequest("session", (responseAsObj) => { // Get the current session informatio
       let newHTMLForLogout = `<a href="profile.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Profile</a>`;
       newHTMLForLogout += `<a href="javascript:logout();" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Logout</a>`;
       document.getElementById('loggedInState').innerHTML = newHTMLForLogout;
+      document.body.classList.add('loggedInState-loggedin');
+      for (let elem of document.getElementsByClassName('loggedInState-userEmail')) {
+        elem.innerText = response.email;
+      }
     }
   });
-})
+});
+
 
 function logout() {
   deleteRequest("session", () => {

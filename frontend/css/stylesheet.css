@@ -147,3 +147,17 @@ font-size: xxx-large;
    font-size: 2em;
    font-weight: 500;
  }
+
+body.loggedInState-loggedin .loggedInState-loggedin {
+   display: block;
+}
+body.loggedInState-loggedin .loggedInState-loggedout {
+   display: none;
+}
+
+body:not(.loggedInState-loggedin) .loggedInState-loggedin {
+   display: none;
+}
+body:not(.loggedInState-loggedin) .loggedInState-loggedout {
+   display: block;
+}

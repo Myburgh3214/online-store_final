@@ -17,57 +17,24 @@ function webRequest(apiName, method, headers, body, callback) {
 }
 
 function postRequest (apiName, fields, callback) {
-  /*
-  fields = {
-    fielda: 'asdf',
-    field2: 'asdfasdf'
-  }
-  fields.fielda
-  fields.field2
-  fields['fielda']
-  fields['field2']
-
-  Object.keys(fields)
-  ['fielda', 'field2'] => names 
-  */
   let myHeaders = new Headers();
   myHeaders.append("Content-Type", "application/json");
-
-  /*let urlencoded = new URLSearchParams();
-
-  for (let field of Object.keys(fields)) {
-    urlencoded.append(field, fields[field]);
-  }*/
-  //['fielda', 'field2']
-  // 0
-  //urlencoded.append('fielda', 'asdf');
-  // 1
-  //urlencoded.append('field2', 'asdfasdf');
-  //urlencoded.append("email", document.getElementById('email').value);
-  //urlencoded.append("psw", document.getElementById('psw').value);
-
-  //fetch(API_BASE_URL + '/api/index.php?_endpoint=' +apiName, requestOptions)
+  
   webRequest(apiName, 'POST', myHeaders, JSON.stringify(fields), callback);
 }
 
 function putRequest (apiName, fields, callback) {
-  /*
-  fields = {
-    fielda: 'asdf',
-    field2: 'asdfasdf'
-  }
-  fields.fielda
-  fields.field2
-  fields['fielda']
-  fields['field2']
-
-  Object.keys(fields)
-  ['fielda', 'field2'] => names 
-  */
   let myHeaders = new Headers();
   myHeaders.append("Content-Type", "application/json");
 
   webRequest(apiName, 'PUT', myHeaders, JSON.stringify(fields), callback);
+}
+
+function patchRequest (apiName, fields, callback) {
+  let myHeaders = new Headers();
+  myHeaders.append("Content-Type", "application/json");
+
+  webRequest(apiName, 'PATCH', myHeaders, JSON.stringify(fields), callback);
 }
 
 function getRequest (apiName, callback) {
