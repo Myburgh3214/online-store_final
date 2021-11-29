@@ -3,12 +3,12 @@
 
 ## DB
 
-Run the ```db/createDb.sql``` script in mysql to create the new database.  
+Run the ```db/koekieblom.sql``` script in mysql to create the new database.  
 
 
 ## API
 
-Define the db connection details in the ```api/index.php```  
+Define the db connection details in the ```api/index.php``` for your DB  
 
 
 ## Web
