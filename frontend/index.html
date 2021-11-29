@@ -26,6 +26,7 @@
       <div id="loggedInState">
         <a href="logIn.html" class="w3-bar-item w3-button w3-hover-white">Login</a>
       </div>
+      <a href="javascript:window.showCart();" class="w3-bar-item w3-button w3-hover-white">Cart/Checkout</a>
     </div>
   </div>
 
@@ -35,68 +36,51 @@
           Discover the World
        </h1>         
        <h2 class="hero-subtitle">
-          We offer the best adventure holidays and tailor-made trips!
+          We offer the best products you could ever imagine!<br />
+          And there are more coming soon!
        </h2>         
-       <button type="button" class="hero-button" onclick="location.href='tours.html'">
-          Search for tours &raquo;
+       <button type="button" class="hero-button" onclick="location.href='store.html'">
+          View products &raquo;
        </button>    
     </div>
   </section>
-  <style>
-    .hero {
-       position: relative;
-       width: 100vw;
-       height: 100vh;
-       display: flex;
-       justify-content: center;
-       align-items: center;
-    }
-    .hero::before {
-       content: "";
-       position: absolute;
-       top: 0;
-       left: 0;
-       width: 100%;
-       height: 100%;
-       background: url(https://i.pinimg.com/originals/2a/88/dc/2a88dccc6e08ad84224184d7e9619ff9.jpg);
-       background-repeat: no-repeat;
-       background-size: cover;
-       background-position: center center;
-       filter: brightness(60%);
-    }
-    .hero-content {
-       position: relative;
-       font-family: "Monserrat", sans-serif;
-       color: white;
-       text-align: center;
-       margin: 0.625rem;
-    }
-    .hero-title {
-       font-size: 3rem;
-       font-weight: 600;
-       margin-bottom: 0;
-    }
-    .hero-subtitle {
-       font-size: 2rem;
-       font-weight: 200;
-       margin-top: 1rem;
-    }
-    .hero-button {
-       background-color: #ae2d59;
-       color: white;
-       border: 1px solid #cb376a;
-       margin-top: 5rem;
-       padding: 0.9375rem1.875rem;
-       font-family: "Monserrat", sans-serif;
-       font-size: 1.125rem;
-       font-weight: 200;
-       cursor: pointer;
-    }
-    .hero-button:hover {
-       background-color: #cb376a;
-       border: 1px solid #db7598;
-    }
-  </style>
+
+  <section>
+    <h2>Featured Products</h2>
+    <div class="card2-container" id="products-list" patt="featured">
+    </div>
+    <script src="scripts/storeAndCart.js"></script>
+  </section>
+
+  <section>
+    <h2>Upcoming Products</h2>
+    <h4>More products coming soon!!</h4>
+  </section>
+
+  <!-- Container -->
+  <div id="clean-cart" class="clean-cart hidden">
+    <a href="javascript:window.hideCart();">HIDE CART</a>
+    <h2>MY CART</h2>
+    <div class="clean-cart-items">
+      <table class="cart-table">
+        <thead class="cart-table-header">
+          <th class="name-col">Product Name</th>
+          <th class="quantity-col">Quantity</th>
+          <th class="price-col">Price</th>
+        </thead>
+        <tbody id="clean-cart-body"></tbody>
+      </table>
+    </div>
+    <div style="text-align:right;">
+      <div style="padding:10px;">
+        <td>Total:</td>
+        <td><span id="clean-cart-total">R0.00</span></td>
+      </div>
+      <div style="float: right; padding: 10px">
+        <button id="checkout" class="fancyButton" onclick="placeOrder()">Place Order</button>
+      </div>
+    </div>
+  </div>
 
   <footer>
     <p class="poweredBy">Powered by MEEE</p>
