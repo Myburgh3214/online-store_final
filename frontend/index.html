@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Home - Online Store</title>
+  <title>Home - My Web Project</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -12,13 +12,13 @@
   <script src="scripts/phpSession.js"></script>
 </head>
 
-<body id="myPage">
+<body>
 
   <!-- Navbar -->
   <div class="w3-top">
     <div class="w3-bar w3-theme-d2 w3-left-align">
 
-      <a href="index.html" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home w3-margin-right"></i>Home</a>
+      <a href="index.html" class="w3-bar-item w3-button w3-teal"><i class="fa fa-shopping-cart w3-margin-right"></i>My Web Project</a>
       <a href="store.html" class="w3-bar-item w3-button w3-hover-white">Store</a>
       <a href="galleryPage.html" class="w3-bar-item w3-button w3-hover-white">Gallery</a>
       <a href="about.html" class="w3-bar-item w3-button w3-hover-white">About Us</a>
@@ -29,11 +29,75 @@
     </div>
   </div>
 
-  <!-- Team Container -->
-  <div class="w3-container w3-padding-64 w3-center" id="team">
-    <img src="images/koekieblom.jpg">
-  </div>
-  
+  <section class="hero">
+    <div class="hero-content">    
+       <h1 class="hero-title">
+          Discover the World
+       </h1>         
+       <h2 class="hero-subtitle">
+          We offer the best adventure holidays and tailor-made trips!
+       </h2>         
+       <button type="button" class="hero-button" onclick="location.href='tours.html'">
+          Search for tours &raquo;
+       </button>    
+    </div>
+  </section>
+  <style>
+    .hero {
+       position: relative;
+       width: 100vw;
+       height: 100vh;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+    }
+    .hero::before {
+       content: "";
+       position: absolute;
+       top: 0;
+       left: 0;
+       width: 100%;
+       height: 100%;
+       background: url(https://i.pinimg.com/originals/2a/88/dc/2a88dccc6e08ad84224184d7e9619ff9.jpg);
+       background-repeat: no-repeat;
+       background-size: cover;
+       background-position: center center;
+       filter: brightness(60%);
+    }
+    .hero-content {
+       position: relative;
+       font-family: "Monserrat", sans-serif;
+       color: white;
+       text-align: center;
+       margin: 0.625rem;
+    }
+    .hero-title {
+       font-size: 3rem;
+       font-weight: 600;
+       margin-bottom: 0;
+    }
+    .hero-subtitle {
+       font-size: 2rem;
+       font-weight: 200;
+       margin-top: 1rem;
+    }
+    .hero-button {
+       background-color: #ae2d59;
+       color: white;
+       border: 1px solid #cb376a;
+       margin-top: 5rem;
+       padding: 0.9375rem1.875rem;
+       font-family: "Monserrat", sans-serif;
+       font-size: 1.125rem;
+       font-weight: 200;
+       cursor: pointer;
+    }
+    .hero-button:hover {
+       background-color: #cb376a;
+       border: 1px solid #db7598;
+    }
+  </style>
+
   <footer>
     <p class="poweredBy">Powered by MEEE</p>
 
@@ -44,7 +108,6 @@
     </div>
     <!-- <a href="javascript:window.triggerScrollToTop();" id="simplescrollup__button" class="simplescrollup__button simplescrollup__button--hide">Scroll to top</a> -->
   </footer>
-  <link rel="stylesheet" href="css/footer.css">
   <script async src="scripts/simplescrollup.js"></script>
 </body>
 

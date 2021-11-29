@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
   <html>
-  <title>Store - Online Store</title>
+  <title>Store - My Web Project</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -12,12 +12,12 @@
   <script src="scripts/phpSession.js"></script>
 </head>
 
-<body id="myPage">
+<body>
   <!-- Navbar -->
   <div class="w3-top">
     <div class="w3-bar w3-theme-d2 w3-left-align">
 
-      <a href="index.html" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home w3-margin-right"></i>Home</a>
+      <a href="index.html" class="w3-bar-item w3-button w3-teal"><i class="fa fa-shopping-cart w3-margin-right"></i>My Web Project</a>
       <a href="store.html" class="w3-bar-item w3-button w3-hover-white">Store</a>
       <a href="galleryPage.html" class="w3-bar-item w3-button w3-hover-white">Gallery</a>
       <a href="about.html" class="w3-bar-item w3-button w3-hover-white">About Us</a>
@@ -42,11 +42,11 @@
   </div>
   <!-- Container -->
   <div id="clean-cart" class="clean-cart">
-    <a href="javascript:window.hideCart();">HIDE</a>
-    <h4>MY CART</h4>
+    <a href="javascript:window.hideCart();">HIDE CART</a>
+    <h2>MY CART</h2>
     <div class="clean-cart-items">
-      <table id="cart-table">
-        <thead id="cart-table-header">
+      <table class="cart-table">
+        <thead class="cart-table-header">
           <th class="name-col">Product Name</th>
           <th class="quantity-col">Quantity</th>
           <th class="price-col">Price</th>
@@ -60,7 +60,7 @@
         <td><span id="clean-cart-total">R0.00</span></td>
       </div>
       <div style="float: right; padding: 10px">
-        <button id="checkout" onclick="placeOrder()">Place Order</button>
+        <button id="checkout" class="fancyButton" onclick="placeOrder()">Place Order</button>
       </div>
     </div>
     <script>
@@ -115,7 +115,6 @@
     </div>
     <!-- <a href="javascript:window.triggerScrollToTop();" id="simplescrollup__button" class="simplescrollup__button simplescrollup__button--hide">Scroll to top</a> -->
   </footer>
-  <link rel="stylesheet" href="css/footer.css">
   <script async src="scripts/simplescrollup.js"></script>
 
   <script src="scripts/storeAndCart.js"></script>
@@ -132,8 +131,9 @@
           singleProduct = product;
         }
 
-        newHtml += `<div class="card">
-            <p class="product-name" >${product.name}</p>
+        newHtml += `<div class="card ${singleProduct !== false ? 'enlarged' : ''}"><div class="av-center">
+          <div class="av-prod-img ${(singleProduct === false ? 'av-sm' : '')}" style="background-image: url('images/${product.image}');"></div>
+            </div><p class="product-name" >${product.name}</p>
             <p class="product-description">${product.description}</p>
             <p class="product-price" >R${product.price}</p>`;
         if (singleProduct === false)
@@ -149,18 +149,6 @@
     function addProductToCart(productId, name) {
       window.cart.addItemToCart(productId);
       window.showCart();
-      //alert('Added 1x '+name+' to your cart');
-      /*postRequest('orders', {
-          backpack: document.getElementById('add-to-cart').value,
-        },
-        result => {
-          if (result.status === 202) {
-           document.getElementById('add-to-cart').value = "";
-            alert('product added!');
-            return;
-          }
-          result.text().then(x => alert(x));
-        });*/
     }
   </script>
 </body>

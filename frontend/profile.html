@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>My Profile - Online Store</title>
+  <title>My Profile - My Web Project</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -20,7 +20,7 @@
     <div class="w3-top">
       <div class="w3-bar w3-theme-d2 w3-left-align">
   
-        <a href="index.html" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home w3-margin-right"></i>Home</a>
+        <a href="index.html" class="w3-bar-item w3-button w3-teal"><i class="fa fa-shopping-cart w3-margin-right"></i>My Web Project</a>
         <a href="store.html" class="w3-bar-item w3-button w3-hover-white">Store</a>
         <a href="galleryPage.html" class="w3-bar-item w3-button w3-hover-white">Gallery</a>
         <a href="about.html" class="w3-bar-item w3-button w3-hover-white">About Us</a>
@@ -31,22 +31,19 @@
       </div>
     </div>
 
-  <div>
-    <div class="fancyForm">
-      <form action="javascript:login();" method="POST">
-        <h1>My Profile</h1>
-        <br />
-        <div class="loggedInState-loggedin">
-          <label for="email">
-            <h4><b>Email:</b>
-          </label>
-          <span class="loggedInState-userEmail"></span>
-        </div>
-        <div class="loggedInState-loggedout">
-          You're not logged in ..... please login to view your profile
-        </div>
-      </form>
-    </div>
+  <div class="fancyForm">
+    <form action="javascript:login();" method="POST">
+      <h1>My Profile</h1>
+      <div class="loggedInState-loggedin">
+        <label for="email">
+          Email:
+        </label>
+        <span class="loggedInState-userEmail"></span>
+      </div>
+      <div class="loggedInState-loggedout">
+        You're not logged in ..... please <a href="logIn.html">login</a> to view your profile
+      </div>
+    </form>
   </div>
 
   <footer>
@@ -59,7 +56,6 @@
     </div>
     <!-- <a href="javascript:window.triggerScrollToTop();" id="simplescrollup__button" class="simplescrollup__button simplescrollup__button--hide">Scroll to top</a> -->
   </footer>
-  <link rel="stylesheet" href="css/footer.css">
   <script async src="scripts/simplescrollup.js"></script>
 
   <script>

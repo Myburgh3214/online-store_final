@@ -1,4 +1,4 @@
-# Welcome to my store :) 
+# Welcome to My Web Project :) 
 
 
 ## DB
@@ -17,7 +17,7 @@ define the server url in the ```frontend/scripts/requestHandler.js```
 
 ## Hosting
 
-Setup a apache webserver in the ```/``` root directly of this project.   
+Setup a apache webserver in the ```/``` root directory of this project.   
 
 
 ### Go to the site :) 

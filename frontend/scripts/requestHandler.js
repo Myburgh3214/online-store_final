@@ -19,7 +19,7 @@ function webRequest(apiName, method, headers, body, callback) {
 function postRequest (apiName, fields, callback) {
   let myHeaders = new Headers();
   myHeaders.append("Content-Type", "application/json");
-  
+
   webRequest(apiName, 'POST', myHeaders, JSON.stringify(fields), callback);
 }
 
